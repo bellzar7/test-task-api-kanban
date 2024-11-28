@@ -147,7 +147,30 @@ This application uses WebSocket (via Socket.io) for real-time updates. Some key 
 - projectCreated: Emitted when a new project is created.
 - userJoinedProject: Emitted when a user is added to a project.
 ## Project Structure
-![img.png](img.png)
+test-task-api-kanban/<br/>
+├── src/ # Main application code <br/>
+│ ├── config/ # Configuration files (e.g., database connection) <br/>
+│ │ └── database.ts <br/>
+│ ├── controllers/ # Controllers for handling API requests <br/>
+│ │ ├── projectController.ts <br/>
+│ │ ├── taskController.ts <br/>
+│ │ └── userController.ts <br/>
+│ ├── middleware/ # Middleware (e.g., authentication) <br/>
+│ │ └── auth.ts <br/>
+│ ├── models/ # Mongoose models <br/>
+│ │ ├── Project.ts <br/>
+│ │ ├── Task.ts <br/>
+│ │ └── User.ts <br/>
+│ ├── routes/ # API routes <br/>
+│ │ ├── projectRoutes.ts <br/>
+│ │ ├── taskRoutes.ts <br/>
+│ │ └── userRoutes.ts <br/>
+│ ├── services/ # Services with application logic <br/>
+│ │ ├── projectService.ts <br/>
+│ │ ├── taskService.ts <br/>
+│ │ ├── userService.ts <br/>
+│ │ └── websocket.ts <br/>
+│ └── server.ts # Entry point of the server
 ## Testing
 You can use tools like Postman or Insomnia for testing the API. The Postman collection is available in the project:
 ./testTaskCanban.postman_collection.json
